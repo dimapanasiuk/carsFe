@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { HomePage, LoginPage, RegisterPage, DashboardPage, SettingsPage, MessagesPage, ServicesPage, CalendarPage, SellCarsPage, BookingPage, AssetsPage } from '@/pages';
+import { HomePage, LoginPage, RegisterPage, SignUpPage, DashboardPage, SettingsPage, MessagesPage, ServicesPage, CalendarPage, SellCarsPage, BookingPage, AssetsPage } from '@/pages';
 import { Layout } from '@/components';
 import { useAuth } from '@/store';
 
@@ -19,6 +19,7 @@ const App: React.FC = () => {
           {/* Auth routes without layout */}
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
           
           {/* Main app routes with layout */}
           <Route path="/" element={<Layout><DashboardPage /></Layout>} />
