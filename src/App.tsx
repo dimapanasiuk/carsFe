@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { HomePage, LoginPage, RegisterPage, DashboardPage, SettingsPage, MessagesPage, ServicesPage } from '@/pages';
+import { HomePage, LoginPage, RegisterPage, DashboardPage, SettingsPage, MessagesPage, ServicesPage, CalendarPage } from '@/pages';
 import { Layout } from '@/components';
 import { useAuth } from '@/store';
 
@@ -28,7 +28,7 @@ const App: React.FC = () => {
           <Route path="/sell-cars" element={<Layout><div className="p-8"><h1 className="text-3xl font-bold">Sell Cars</h1><p className="text-gray-600 mt-2">Sell Cars page coming soon...</p></div></Layout>} />
           <Route path="/buy-cars" element={<Layout><div className="p-8"><h1 className="text-3xl font-bold">Buy Cars</h1><p className="text-gray-600 mt-2">Buy Cars page coming soon...</p></div></Layout>} />
           <Route path="/services" element={<Layout><ServicesPage /></Layout>} />
-          <Route path="/calendar" element={<Layout><div className="p-8"><h1 className="text-3xl font-bold">Calendar</h1><p className="text-gray-600 mt-2">Calendar page coming soon...</p></div></Layout>} />
+          <Route path="/calendar" element={<Layout><CalendarPage /></Layout>} />
           <Route path="/messages" element={<Layout><MessagesPage /></Layout>} />
           <Route path="/settings" element={<Layout><SettingsPage /></Layout>} />
           
