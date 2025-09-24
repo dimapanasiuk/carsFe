@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { HomePage, LoginPage, RegisterPage, DashboardPage, SettingsPage, MessagesPage, ServicesPage, CalendarPage } from '@/pages';
+import { HomePage, LoginPage, RegisterPage, DashboardPage, SettingsPage, MessagesPage, ServicesPage, CalendarPage, SellCarsPage } from '@/pages';
 import { Layout } from '@/components';
 import { useAuth } from '@/store';
 
@@ -25,7 +25,7 @@ const App: React.FC = () => {
           <Route path="/dashboard" element={<Layout><DashboardPage /></Layout>} />
           <Route path="/assets" element={<Layout><div className="p-8"><h1 className="text-3xl font-bold">Assets</h1><p className="text-gray-600 mt-2">Assets page coming soon...</p></div></Layout>} />
           <Route path="/booking" element={<Layout><div className="p-8"><h1 className="text-3xl font-bold">Booking</h1><p className="text-gray-600 mt-2">Booking page coming soon...</p></div></Layout>} />
-          <Route path="/sell-cars" element={<Layout><div className="p-8"><h1 className="text-3xl font-bold">Sell Cars</h1><p className="text-gray-600 mt-2">Sell Cars page coming soon...</p></div></Layout>} />
+          <Route path="/sell-cars" element={<Layout><SellCarsPage /></Layout>} />
           <Route path="/buy-cars" element={<Layout><div className="p-8"><h1 className="text-3xl font-bold">Buy Cars</h1><p className="text-gray-600 mt-2">Buy Cars page coming soon...</p></div></Layout>} />
           <Route path="/services" element={<Layout><ServicesPage /></Layout>} />
           <Route path="/calendar" element={<Layout><CalendarPage /></Layout>} />
