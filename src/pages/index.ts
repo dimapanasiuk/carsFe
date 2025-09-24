@@ -7,3 +7,4 @@ export * from './Services';
 export * from './Calendar';
 export * from './SellCars';
 export * from './Booking';
+export * from './Assets';
